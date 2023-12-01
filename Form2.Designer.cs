@@ -92,15 +92,16 @@
             show_password_checkbox.TabIndex = 16;
             show_password_checkbox.Text = "Show Password";
             show_password_checkbox.UseVisualStyleBackColor = true;
+            show_password_checkbox.CheckedChanged += show_password_checkbox_CheckedChanged;
             // 
             // password_textbox
             // 
             password_textbox.BorderStyle = BorderStyle.FixedSingle;
             password_textbox.Location = new Point(214, 212);
             password_textbox.Name = "password_textbox";
-            password_textbox.PasswordChar = '*';
             password_textbox.Size = new Size(243, 27);
             password_textbox.TabIndex = 15;
+            password_textbox.UseSystemPasswordChar = true;
             // 
             // fullname_textbox
             // 
@@ -164,9 +165,9 @@
             confirm_password_textbox.BorderStyle = BorderStyle.FixedSingle;
             confirm_password_textbox.Location = new Point(214, 259);
             confirm_password_textbox.Name = "confirm_password_textbox";
-            confirm_password_textbox.PasswordChar = '*';
             confirm_password_textbox.Size = new Size(243, 27);
             confirm_password_textbox.TabIndex = 23;
+            confirm_password_textbox.UseSystemPasswordChar = true;
             // 
             // label5
             // 

@@ -22,7 +22,21 @@ namespace Citisoft_Software
             this.Close();
             login_form log = new login_form();
             log.Show();
-            
+
+        }
+
+        private void show_password_checkbox_CheckedChanged(object sender, EventArgs e)
+        {
+            if (show_password_checkbox.Checked) 
+            {
+                password_textbox.UseSystemPasswordChar = false;
+                confirm_password_textbox.UseSystemPasswordChar = false;
+            }
+            else
+            {
+                password_textbox.UseSystemPasswordChar = true;
+                confirm_password_textbox.UseSystemPasswordChar = true;
+            }
         }
     }
 }
