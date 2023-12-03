@@ -61,21 +61,21 @@
             // 
             label4.AutoSize = true;
             label4.Font = new Font("Times New Roman", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label4.Location = new Point(147, 426);
+            label4.Location = new Point(176, 426);
             label4.Name = "label4";
-            label4.Size = new Size(179, 19);
+            label4.Size = new Size(113, 19);
             label4.TabIndex = 18;
-            label4.Text = "Already Have an Account";
+            label4.Text = "Already a user?";
             // 
             // btn_register
             // 
             btn_register.BackColor = SystemColors.ActiveCaptionText;
             btn_register.Cursor = Cursors.Hand;
-            btn_register.Font = new Font("Tahoma", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            btn_register.Font = new Font("Tahoma", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
             btn_register.ForeColor = SystemColors.ButtonHighlight;
-            btn_register.Location = new Point(157, 333);
+            btn_register.Location = new Point(167, 335);
             btn_register.Name = "btn_register";
-            btn_register.Size = new Size(152, 42);
+            btn_register.Size = new Size(122, 40);
             btn_register.TabIndex = 17;
             btn_register.Text = "REGISTER";
             btn_register.UseVisualStyleBackColor = false;
@@ -114,30 +114,30 @@
             // label3
             // 
             label3.AutoSize = true;
-            label3.Font = new Font("Calibri", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label3.Font = new Font("Calibri", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label3.Location = new Point(12, 212);
             label3.Name = "label3";
-            label3.Size = new Size(94, 24);
+            label3.Size = new Size(97, 24);
             label3.TabIndex = 13;
             label3.Text = "Password:";
             // 
             // label2
             // 
             label2.AutoSize = true;
-            label2.Font = new Font("Calibri", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label2.Font = new Font("Calibri", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label2.Location = new Point(12, 163);
             label2.Name = "label2";
-            label2.Size = new Size(133, 24);
+            label2.Size = new Size(134, 24);
             label2.TabIndex = 12;
             label2.Text = "Email Address:";
             // 
             // login
             // 
             login.AutoSize = true;
-            login.Font = new Font("Calibri", 16.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            login.Font = new Font("Californian FB", 16.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
             login.Location = new Point(36, 22);
             login.Name = "login";
-            login.Size = new Size(190, 35);
+            login.Size = new Size(188, 33);
             login.TabIndex = 11;
             login.Text = "Create Account";
             login.TextAlign = ContentAlignment.TopCenter;
@@ -145,10 +145,10 @@
             // label1
             // 
             label1.AutoSize = true;
-            label1.Font = new Font("Calibri", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label1.Font = new Font("Calibri", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label1.Location = new Point(12, 110);
             label1.Name = "label1";
-            label1.Size = new Size(99, 24);
+            label1.Size = new Size(100, 24);
             label1.TabIndex = 20;
             label1.Text = "Full Name:";
             // 
@@ -172,10 +172,10 @@
             // label5
             // 
             label5.AutoSize = true;
-            label5.Font = new Font("Calibri", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label5.Font = new Font("Calibri", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label5.Location = new Point(12, 259);
             label5.Name = "label5";
-            label5.Size = new Size(166, 24);
+            label5.Size = new Size(169, 24);
             label5.TabIndex = 22;
             label5.Text = "Confirm Password:";
             // 
