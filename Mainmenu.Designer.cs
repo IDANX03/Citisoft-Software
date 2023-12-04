@@ -28,15 +28,21 @@
         /// </summary>
         private void InitializeComponent()
         {
+            components = new System.ComponentModel.Container();
             pictureBox1 = new PictureBox();
             textBox1 = new TextBox();
+            view_vendor_btn = new Button();
+            view_product_btn = new Button();
+            logout_btn = new Button();
+            label1 = new Label();
+            contextMenuStrip1 = new ContextMenuStrip(components);
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
             // 
             // pictureBox1
             // 
             pictureBox1.Image = Properties.Resources.citisoft;
-            pictureBox1.Location = new Point(12, 21);
+            pictureBox1.Location = new Point(12, 12);
             pictureBox1.Name = "pictureBox1";
             pictureBox1.Size = new Size(125, 62);
             pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
@@ -45,19 +51,76 @@
             // 
             // textBox1
             // 
-            textBox1.Location = new Point(256, 56);
+            textBox1.Location = new Point(276, 81);
             textBox1.Name = "textBox1";
             textBox1.Size = new Size(285, 27);
             textBox1.TabIndex = 1;
+            // 
+            // view_vendor_btn
+            // 
+            view_vendor_btn.Cursor = Cursors.Hand;
+            view_vendor_btn.FlatStyle = FlatStyle.Popup;
+            view_vendor_btn.Font = new Font("Times New Roman", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            view_vendor_btn.Location = new Point(12, 125);
+            view_vendor_btn.Name = "view_vendor_btn";
+            view_vendor_btn.Size = new Size(164, 36);
+            view_vendor_btn.TabIndex = 2;
+            view_vendor_btn.Text = "View Vendor";
+            view_vendor_btn.UseVisualStyleBackColor = true;
+            // 
+            // view_product_btn
+            // 
+            view_product_btn.Cursor = Cursors.Hand;
+            view_product_btn.FlatStyle = FlatStyle.Popup;
+            view_product_btn.Font = new Font("Times New Roman", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            view_product_btn.Location = new Point(11, 197);
+            view_product_btn.Name = "view_product_btn";
+            view_product_btn.Size = new Size(164, 36);
+            view_product_btn.TabIndex = 3;
+            view_product_btn.Text = "View Product";
+            view_product_btn.UseVisualStyleBackColor = true;
+            // 
+            // logout_btn
+            // 
+            logout_btn.Cursor = Cursors.Hand;
+            logout_btn.FlatStyle = FlatStyle.Popup;
+            logout_btn.Font = new Font("Times New Roman", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            logout_btn.Location = new Point(22, 387);
+            logout_btn.Name = "logout_btn";
+            logout_btn.Size = new Size(98, 36);
+            logout_btn.TabIndex = 4;
+            logout_btn.Text = "Logout";
+            logout_btn.UseVisualStyleBackColor = true;
+            logout_btn.Click += logout_btn_Click;
+            // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.Font = new Font("Times New Roman", 16.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label1.Location = new Point(175, 21);
+            label1.Name = "label1";
+            label1.Size = new Size(0, 32);
+            label1.TabIndex = 5;
+            // 
+            // contextMenuStrip1
+            // 
+            contextMenuStrip1.ImageScalingSize = new Size(20, 20);
+            contextMenuStrip1.Name = "contextMenuStrip1";
+            contextMenuStrip1.Size = new Size(61, 4);
             // 
             // Mainmenu
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
+            Controls.Add(label1);
+            Controls.Add(logout_btn);
+            Controls.Add(view_product_btn);
+            Controls.Add(view_vendor_btn);
             Controls.Add(textBox1);
             Controls.Add(pictureBox1);
             Name = "Mainmenu";
+            StartPosition = FormStartPosition.CenterParent;
             Text = "Mainmenu";
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ResumeLayout(false);
@@ -68,5 +131,10 @@
 
         private PictureBox pictureBox1;
         private TextBox textBox1;
+        private Button view_vendor_btn;
+        private Button view_product_btn;
+        private Button logout_btn;
+        private Label label1;
+        private ContextMenuStrip contextMenuStrip1;
     }
 }

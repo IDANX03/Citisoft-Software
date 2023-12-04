@@ -16,5 +16,18 @@ namespace Citisoft_Software
         {
             InitializeComponent();
         }
+
+        
+
+        
+
+        private void logout_btn_Click(object sender, EventArgs e)
+        {
+            if (MessageBox.Show("Are you sure you want to exit","Exit",MessageBoxButtons.YesNo,MessageBoxIcon.Question) == DialogResult.Yes)
+            {
+                Application.Exit();
+            }
+
+        }
     }
 }
