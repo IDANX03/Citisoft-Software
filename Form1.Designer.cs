@@ -74,7 +74,7 @@
             // email_logintextbox
             // 
             email_logintextbox.BorderStyle = BorderStyle.FixedSingle;
-            email_logintextbox.ForeColor = SystemColors.GrayText;
+            email_logintextbox.ForeColor = SystemColors.WindowText;
             email_logintextbox.Location = new Point(172, 138);
             email_logintextbox.Name = "email_logintextbox";
             email_logintextbox.Size = new Size(228, 27);

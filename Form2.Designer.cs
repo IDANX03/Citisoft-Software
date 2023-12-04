@@ -79,6 +79,7 @@
             btn_register.TabIndex = 17;
             btn_register.Text = "REGISTER";
             btn_register.UseVisualStyleBackColor = false;
+            btn_register.Click += btn_register_Click;
             // 
             // show_password_checkbox
             // 
@@ -210,10 +211,10 @@
             Controls.Add(label3);
             Controls.Add(label2);
             Controls.Add(login);
-            Cursor = Cursors.Hand;
             Name = "register_form";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Register";
+          
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ResumeLayout(false);
             PerformLayout();

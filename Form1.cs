@@ -12,43 +12,43 @@ namespace Citisoft_Software
 
         }
         SqlConnection con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=""C:\Users\iamid\Documents\Idan documents\Software engineering\Visual studios code\Citisoft Software\userdata.mdf"";Integrated Security=True");
+
+
+
         private void btn_login_Click(object sender, EventArgs e)
         {
-            string email , password;
-
+            String email, password;
             email = email_logintextbox.Text;
             password = password_logintextbox.Text;
             try
             {
-                string querry = "SELECT * FROM userdata WHERE email_address = '" + email_logintextbox.Text + "' AND password= '" + password_logintextbox.Text + "' ";
-                SqlDataAdapter sda = new SqlDataAdapter();
+                String query = "SELECT email_address,password FROM user_details WHERE email_address = '" +email + "' AND password = '" +password+ "'";
+                SqlDataAdapter adp = new SqlDataAdapter(query, con);
                 DataTable dt = new DataTable();
-                sda.Fill(dt);
+                adp.Fill(dt);
+
                 if(dt.Rows.Count > 0)
                 {
-                    email = email_logintextbox.Text; 
-                    password = password_logintextbox.Text;
-                    Mainmenu mainform= new Mainmenu();
-                    mainform.Show();
+                    Mainmenu mainmenu = new Mainmenu();
+                    mainmenu.Show();
                     this.Hide();
                 }
-                else
+                else 
                 {
-                    MessageBox.Show("Email or Password incorrect","Error",MessageBoxButtons.OK,MessageBoxIcon.Error);
+                    MessageBox.Show("Login details do not match","Login Error",MessageBoxButtons.OK,MessageBoxIcon.Error);
                     email_logintextbox.Clear();
                     password_logintextbox.Clear();
-
                     email_logintextbox.Focus();
-                    
+
                 }
 
             }
-            catch
+            catch 
             {
                 MessageBox.Show("Login Error");
             }
             finally { con.Close(); }
-        }
+        }   
 
         private void create_account_Click(object sender, EventArgs e)
         {
@@ -69,5 +69,7 @@ namespace Citisoft_Software
                 password_logintextbox.UseSystemPasswordChar = true;
             }
         }
+
+       
     }
 }
