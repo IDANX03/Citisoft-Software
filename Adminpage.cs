@@ -25,7 +25,9 @@ namespace Citisoft_Software
             res = MessageBox.Show("Do you want to Exit", "Exit", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
             if (res == DialogResult.Yes)
             {
-                Application.Exit();
+                this.Close();
+                login_form login_Form = new login_form();
+                login_Form.Show();
             }
             else
             {
@@ -34,6 +36,7 @@ namespace Citisoft_Software
 
 
             }
+
         }
 
         private void edit_userbtn_Click(object sender, EventArgs e)

@@ -137,7 +137,7 @@
             edit_profilebtn.Cursor = Cursors.Hand;
             edit_profilebtn.FlatStyle = FlatStyle.Popup;
             edit_profilebtn.Font = new Font("Times New Roman", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            edit_profilebtn.Location = new Point(12, 318);
+            edit_profilebtn.Location = new Point(22, 318);
             edit_profilebtn.Name = "edit_profilebtn";
             edit_profilebtn.Size = new Size(164, 36);
             edit_profilebtn.TabIndex = 8;
