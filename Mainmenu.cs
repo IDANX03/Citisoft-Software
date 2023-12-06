@@ -24,9 +24,20 @@ namespace Citisoft_Software
 
         private void logout_btn_Click(object sender, EventArgs e)
         {
-            if (MessageBox.Show("Are you sure you want to exit", "Exit", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            DialogResult res;
+            res = MessageBox.Show("Do you want to Exit", "Exit", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (res == DialogResult.Yes)
             {
-                Application.Exit();
+                this.Hide();
+                login_form login_Form = new login_form();
+                login_Form.Show();
+            }
+            else
+            {
+                this.Show();
+
+
+
             }
 
         }

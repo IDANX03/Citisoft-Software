@@ -25,7 +25,7 @@ namespace Citisoft_Software
             res = MessageBox.Show("Do you want to Exit", "Exit", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
             if (res == DialogResult.Yes)
             {
-                this.Close();
+                this.Hide();
                 login_form login_Form = new login_form();
                 login_Form.Show();
             }
