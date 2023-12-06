@@ -20,30 +20,36 @@ namespace Citisoft_Software
             String email, password;
             email = email_logintextbox.Text;
             password = password_logintextbox.Text;
+           
+            con.Open();
             try
             {
-                String query = "SELECT email_address,password FROM user_details WHERE email_address = '" +email + "' AND password = '" +password+ "'";
+                String query = "SELECT email_address,password FROM user_details WHERE email_address = '" + email + "' AND password = '" + password + "' ";
                 SqlDataAdapter adp = new SqlDataAdapter(query, con);
                 DataTable dt = new DataTable();
                 adp.Fill(dt);
 
-                if(dt.Rows.Count > 0)
+                if (dt.Rows.Count > 0)
                 {
                     Mainmenu mainmenu = new Mainmenu();
                     mainmenu.Show();
                     this.Hide();
                 }
-                else 
+                else if (email_logintextbox.Text == "admin@gmail.com" && password_logintextbox.Text == "Admin2023")
                 {
-                    MessageBox.Show("Login details do not match","Login Error",MessageBoxButtons.OK,MessageBoxIcon.Error);
+                    this.Hide();
+                    Adminpage adminpage = new Adminpage();
+                    adminpage.Show();
+                }
+                else
+                {
+                    MessageBox.Show("Login details do not match", "Login Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     email_logintextbox.Clear();
                     password_logintextbox.Clear();
                     email_logintextbox.Focus();
-
                 }
-
             }
-            catch 
+            catch
             {
                 MessageBox.Show("Login Error");
             }

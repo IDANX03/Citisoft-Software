@@ -47,14 +47,14 @@ namespace Citisoft_Software
         {
             try
             {
-                if (fullname_textbox.Text == "" && email_textbox.Text == "" && password_textbox.Text == "" && confirm_password_textbox.Text == "")
+                if (fullname_textbox.Text == "" && email_textbox.Text == "" && password_textbox.Text == "" && confirm_password_textbox.Text == "" )
                 {
                     MessageBox.Show("Boxes are Empty", "Registration Failed", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
                 else if (password_textbox.Text == confirm_password_textbox.Text)
                 {
                     con.Open();
-                    string reg = "INSERT INTO user_details(full_name,email_address,password) VALUES('"+fullname_textbox.Text+"', '"+email_textbox.Text+"', '"+password_textbox.Text+"')";
+                    string reg = "INSERT INTO user_details(full_name,email_address,password) VALUES('" + fullname_textbox.Text + "', '" + email_textbox.Text + "', '" + password_textbox.Text + "')";
 
                     SqlCommand cmd = new SqlCommand(reg, con);
                     cmd.ExecuteNonQuery();
@@ -67,7 +67,6 @@ namespace Citisoft_Software
                     password_textbox.Clear();
                     confirm_password_textbox.Clear();
                     fullname_textbox.Focus();
-
                 }
                 else
                 {
@@ -75,6 +74,7 @@ namespace Citisoft_Software
                     password_textbox.Clear();
                     confirm_password_textbox.Clear();
                     password_textbox.Focus();
+
                 }
             }
             catch (Exception exc)
@@ -84,6 +84,8 @@ namespace Citisoft_Software
             }
             con.Close();
         }
+
+       
     }
 }
 

@@ -38,6 +38,8 @@
             label4 = new Label();
             create_account = new Label();
             pictureBox1 = new PictureBox();
+            account_combobox = new ComboBox();
+            account_typebtn = new Label();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
             // 
@@ -55,7 +57,7 @@
             // 
             label2.AutoSize = true;
             label2.Font = new Font("Calibri", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label2.Location = new Point(22, 141);
+            label2.Location = new Point(22, 192);
             label2.Name = "label2";
             label2.Size = new Size(134, 24);
             label2.TabIndex = 1;
@@ -65,7 +67,7 @@
             // 
             label3.AutoSize = true;
             label3.Font = new Font("Calibri", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label3.Location = new Point(22, 211);
+            label3.Location = new Point(22, 266);
             label3.Name = "label3";
             label3.Size = new Size(97, 24);
             label3.TabIndex = 2;
@@ -75,7 +77,7 @@
             // 
             email_logintextbox.BorderStyle = BorderStyle.FixedSingle;
             email_logintextbox.ForeColor = SystemColors.WindowText;
-            email_logintextbox.Location = new Point(172, 138);
+            email_logintextbox.Location = new Point(172, 193);
             email_logintextbox.Name = "email_logintextbox";
             email_logintextbox.Size = new Size(228, 27);
             email_logintextbox.TabIndex = 5;
@@ -83,7 +85,7 @@
             // password_logintextbox
             // 
             password_logintextbox.BorderStyle = BorderStyle.FixedSingle;
-            password_logintextbox.Location = new Point(172, 208);
+            password_logintextbox.Location = new Point(172, 263);
             password_logintextbox.Name = "password_logintextbox";
             password_logintextbox.Size = new Size(228, 27);
             password_logintextbox.TabIndex = 6;
@@ -95,7 +97,7 @@
             show_password_checkbox.Cursor = Cursors.Hand;
             show_password_checkbox.FlatStyle = FlatStyle.Flat;
             show_password_checkbox.Font = new Font("Times New Roman", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            show_password_checkbox.Location = new Point(340, 256);
+            show_password_checkbox.Location = new Point(361, 306);
             show_password_checkbox.Name = "show_password_checkbox";
             show_password_checkbox.Size = new Size(121, 21);
             show_password_checkbox.TabIndex = 7;
@@ -109,7 +111,7 @@
             btn_login.Cursor = Cursors.Hand;
             btn_login.Font = new Font("Calibri", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btn_login.ForeColor = SystemColors.ButtonFace;
-            btn_login.Location = new Point(150, 297);
+            btn_login.Location = new Point(159, 347);
             btn_login.Name = "btn_login";
             btn_login.Size = new Size(152, 42);
             btn_login.TabIndex = 8;
@@ -143,12 +145,32 @@
             // 
             pictureBox1.BackColor = SystemColors.ControlLightLight;
             pictureBox1.Image = Properties.Resources.citisoft;
-            pictureBox1.Location = new Point(159, 29);
+            pictureBox1.Location = new Point(159, 12);
             pictureBox1.Name = "pictureBox1";
             pictureBox1.Size = new Size(160, 75);
             pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBox1.TabIndex = 11;
             pictureBox1.TabStop = false;
+            // 
+            // account_combobox
+            // 
+            account_combobox.Font = new Font("Times New Roman", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            account_combobox.FormattingEnabled = true;
+            account_combobox.Items.AddRange(new object[] { "User", "Admin" });
+            account_combobox.Location = new Point(172, 123);
+            account_combobox.Name = "account_combobox";
+            account_combobox.Size = new Size(228, 27);
+            account_combobox.TabIndex = 28;
+            // 
+            // account_typebtn
+            // 
+            account_typebtn.AutoSize = true;
+            account_typebtn.Font = new Font("Calibri", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            account_typebtn.Location = new Point(22, 126);
+            account_typebtn.Name = "account_typebtn";
+            account_typebtn.Size = new Size(128, 24);
+            account_typebtn.TabIndex = 27;
+            account_typebtn.Text = "Account Type:";
             // 
             // login_form
             // 
@@ -156,6 +178,8 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.ControlLightLight;
             ClientSize = new Size(494, 486);
+            Controls.Add(account_combobox);
+            Controls.Add(account_typebtn);
             Controls.Add(pictureBox1);
             Controls.Add(create_account);
             Controls.Add(label4);
@@ -189,5 +213,7 @@
         private Label label6;
         private TextBox full_name_textbox;
         private PictureBox pictureBox1;
+        private ComboBox account_combobox;
+        private Label account_typebtn;
     }
 }

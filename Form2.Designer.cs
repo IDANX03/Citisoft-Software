@@ -50,7 +50,7 @@
             back_to_login.AutoSize = true;
             back_to_login.Cursor = Cursors.Hand;
             back_to_login.Font = new Font("Calibri", 10.2F, FontStyle.Bold | FontStyle.Underline, GraphicsUnit.Point, 0);
-            back_to_login.Location = new Point(176, 445);
+            back_to_login.Location = new Point(183, 476);
             back_to_login.Name = "back_to_login";
             back_to_login.Size = new Size(103, 21);
             back_to_login.TabIndex = 19;
@@ -61,7 +61,7 @@
             // 
             label4.AutoSize = true;
             label4.Font = new Font("Times New Roman", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label4.Location = new Point(176, 426);
+            label4.Location = new Point(183, 457);
             label4.Name = "label4";
             label4.Size = new Size(113, 19);
             label4.TabIndex = 18;
@@ -73,7 +73,7 @@
             btn_register.Cursor = Cursors.Hand;
             btn_register.Font = new Font("Tahoma", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
             btn_register.ForeColor = SystemColors.ButtonHighlight;
-            btn_register.Location = new Point(167, 335);
+            btn_register.Location = new Point(183, 363);
             btn_register.Name = "btn_register";
             btn_register.Size = new Size(122, 40);
             btn_register.TabIndex = 17;
@@ -87,7 +87,7 @@
             show_password_checkbox.Cursor = Cursors.Hand;
             show_password_checkbox.FlatStyle = FlatStyle.Flat;
             show_password_checkbox.Font = new Font("Times New Roman", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            show_password_checkbox.Location = new Point(361, 302);
+            show_password_checkbox.Location = new Point(401, 314);
             show_password_checkbox.Name = "show_password_checkbox";
             show_password_checkbox.Size = new Size(121, 21);
             show_password_checkbox.TabIndex = 16;
@@ -98,7 +98,7 @@
             // password_textbox
             // 
             password_textbox.BorderStyle = BorderStyle.FixedSingle;
-            password_textbox.Location = new Point(214, 212);
+            password_textbox.Location = new Point(210, 224);
             password_textbox.Name = "password_textbox";
             password_textbox.Size = new Size(243, 27);
             password_textbox.TabIndex = 15;
@@ -107,7 +107,7 @@
             // fullname_textbox
             // 
             fullname_textbox.BorderStyle = BorderStyle.FixedSingle;
-            fullname_textbox.Location = new Point(214, 110);
+            fullname_textbox.Location = new Point(210, 122);
             fullname_textbox.Name = "fullname_textbox";
             fullname_textbox.Size = new Size(243, 27);
             fullname_textbox.TabIndex = 14;
@@ -116,7 +116,7 @@
             // 
             label3.AutoSize = true;
             label3.Font = new Font("Calibri", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label3.Location = new Point(12, 212);
+            label3.Location = new Point(8, 224);
             label3.Name = "label3";
             label3.Size = new Size(97, 24);
             label3.TabIndex = 13;
@@ -126,7 +126,7 @@
             // 
             label2.AutoSize = true;
             label2.Font = new Font("Calibri", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label2.Location = new Point(12, 163);
+            label2.Location = new Point(8, 175);
             label2.Name = "label2";
             label2.Size = new Size(134, 24);
             label2.TabIndex = 12;
@@ -147,7 +147,7 @@
             // 
             label1.AutoSize = true;
             label1.Font = new Font("Calibri", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label1.Location = new Point(12, 110);
+            label1.Location = new Point(8, 122);
             label1.Name = "label1";
             label1.Size = new Size(100, 24);
             label1.TabIndex = 20;
@@ -156,7 +156,7 @@
             // email_textbox
             // 
             email_textbox.BorderStyle = BorderStyle.FixedSingle;
-            email_textbox.Location = new Point(214, 160);
+            email_textbox.Location = new Point(210, 172);
             email_textbox.Name = "email_textbox";
             email_textbox.Size = new Size(243, 27);
             email_textbox.TabIndex = 21;
@@ -164,7 +164,7 @@
             // confirm_password_textbox
             // 
             confirm_password_textbox.BorderStyle = BorderStyle.FixedSingle;
-            confirm_password_textbox.Location = new Point(214, 259);
+            confirm_password_textbox.Location = new Point(210, 271);
             confirm_password_textbox.Name = "confirm_password_textbox";
             confirm_password_textbox.Size = new Size(243, 27);
             confirm_password_textbox.TabIndex = 23;
@@ -174,7 +174,7 @@
             // 
             label5.AutoSize = true;
             label5.Font = new Font("Calibri", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label5.Location = new Point(12, 259);
+            label5.Location = new Point(8, 271);
             label5.Name = "label5";
             label5.Size = new Size(169, 24);
             label5.TabIndex = 22;
@@ -184,7 +184,7 @@
             // 
             pictureBox1.BackColor = SystemColors.ControlLightLight;
             pictureBox1.Image = Properties.Resources.citisoft;
-            pictureBox1.Location = new Point(357, 22);
+            pictureBox1.Location = new Point(381, 12);
             pictureBox1.Name = "pictureBox1";
             pictureBox1.Size = new Size(125, 62);
             pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
@@ -196,7 +196,7 @@
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.ControlLightLight;
-            ClientSize = new Size(494, 513);
+            ClientSize = new Size(527, 513);
             Controls.Add(pictureBox1);
             Controls.Add(confirm_password_textbox);
             Controls.Add(label5);
@@ -214,7 +214,6 @@
             Name = "register_form";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Register";
-          
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ResumeLayout(false);
             PerformLayout();
