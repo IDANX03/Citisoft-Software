@@ -29,11 +29,11 @@
         private void InitializeComponent()
         {
             dataGridView1 = new DataGridView();
-            view_vendor_adminbtn = new Button();
             pictureBox1 = new PictureBox();
-            view_products_adminbtn = new Button();
-            add_vendor_btn = new Button();
-            add_products_btn = new Button();
+            button1 = new Button();
+            button2 = new Button();
+            edit_userbtn = new Button();
+            logout_btn = new Button();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
@@ -41,80 +41,79 @@
             // dataGridView1
             // 
             dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Location = new Point(162, 121);
+            dataGridView1.Location = new Point(175, 112);
             dataGridView1.Name = "dataGridView1";
             dataGridView1.RowHeadersWidth = 51;
-            dataGridView1.Size = new Size(479, 301);
+            dataGridView1.Size = new Size(1177, 449);
             dataGridView1.TabIndex = 0;
-            // 
-            // view_vendor_adminbtn
-            // 
-            view_vendor_adminbtn.Cursor = Cursors.Hand;
-            view_vendor_adminbtn.FlatStyle = FlatStyle.Popup;
-            view_vendor_adminbtn.Font = new Font("Times New Roman", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            view_vendor_adminbtn.Location = new Point(12, 121);
-            view_vendor_adminbtn.Name = "view_vendor_adminbtn";
-            view_vendor_adminbtn.Size = new Size(126, 29);
-            view_vendor_adminbtn.TabIndex = 1;
-            view_vendor_adminbtn.Text = "View Vendors";
-            view_vendor_adminbtn.UseVisualStyleBackColor = true;
             // 
             // pictureBox1
             // 
             pictureBox1.Image = Properties.Resources.citisoft;
-            pictureBox1.Location = new Point(13, 23);
+            pictureBox1.Location = new Point(13, 12);
             pictureBox1.Name = "pictureBox1";
             pictureBox1.Size = new Size(125, 62);
             pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox1.TabIndex = 2;
             pictureBox1.TabStop = false;
             // 
-            // view_products_adminbtn
+            // button1
             // 
-            view_products_adminbtn.Cursor = Cursors.Hand;
-            view_products_adminbtn.FlatStyle = FlatStyle.Popup;
-            view_products_adminbtn.Font = new Font("Times New Roman", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            view_products_adminbtn.Location = new Point(13, 187);
-            view_products_adminbtn.Name = "view_products_adminbtn";
-            view_products_adminbtn.Size = new Size(125, 29);
-            view_products_adminbtn.TabIndex = 3;
-            view_products_adminbtn.Text = "View Products";
-            view_products_adminbtn.UseVisualStyleBackColor = true;
+            button1.Cursor = Cursors.Hand;
+            button1.Font = new Font("Times New Roman", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            button1.Location = new Point(13, 154);
+            button1.Name = "button1";
+            button1.Size = new Size(125, 29);
+            button1.TabIndex = 3;
+            button1.Text = "Edit Vendor";
+            button1.UseVisualStyleBackColor = true;
             // 
-            // add_vendor_btn
+            // button2
             // 
-            add_vendor_btn.Cursor = Cursors.Hand;
-            add_vendor_btn.FlatStyle = FlatStyle.Popup;
-            add_vendor_btn.Font = new Font("Times New Roman", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            add_vendor_btn.Location = new Point(12, 262);
-            add_vendor_btn.Name = "add_vendor_btn";
-            add_vendor_btn.Size = new Size(125, 29);
-            add_vendor_btn.TabIndex = 4;
-            add_vendor_btn.Text = "Add Vendors";
-            add_vendor_btn.UseVisualStyleBackColor = true;
+            button2.Cursor = Cursors.Hand;
+            button2.Font = new Font("Times New Roman", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            button2.Location = new Point(13, 216);
+            button2.Name = "button2";
+            button2.Size = new Size(125, 29);
+            button2.TabIndex = 4;
+            button2.Text = "Edit Products";
+            button2.UseVisualStyleBackColor = true;
             // 
-            // add_products_btn
+            // edit_userbtn
             // 
-            add_products_btn.Cursor = Cursors.Hand;
-            add_products_btn.FlatStyle = FlatStyle.Popup;
-            add_products_btn.Font = new Font("Times New Roman", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            add_products_btn.Location = new Point(13, 337);
-            add_products_btn.Name = "add_products_btn";
-            add_products_btn.Size = new Size(125, 29);
-            add_products_btn.TabIndex = 5;
-            add_products_btn.Text = "Add Products";
-            add_products_btn.UseVisualStyleBackColor = true;
+            edit_userbtn.Cursor = Cursors.Hand;
+            edit_userbtn.Font = new Font("Times New Roman", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            edit_userbtn.Location = new Point(12, 286);
+            edit_userbtn.Name = "edit_userbtn";
+            edit_userbtn.Size = new Size(125, 29);
+            edit_userbtn.TabIndex = 5;
+            edit_userbtn.Text = "Edit User";
+            edit_userbtn.UseVisualStyleBackColor = true;
+            edit_userbtn.Click += edit_userbtn_Click;
+            // 
+            // logout_btn
+            // 
+            logout_btn.Cursor = Cursors.Hand;
+            logout_btn.FlatStyle = FlatStyle.Popup;
+            logout_btn.Font = new Font("Times New Roman", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            logout_btn.Location = new Point(13, 373);
+            logout_btn.Name = "logout_btn";
+            logout_btn.Size = new Size(98, 36);
+            logout_btn.TabIndex = 6;
+            logout_btn.Text = "Logout";
+            logout_btn.UseVisualStyleBackColor = true;
+            logout_btn.Click += logout_btn_Click;
             // 
             // Adminpage
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 450);
-            Controls.Add(add_products_btn);
-            Controls.Add(add_vendor_btn);
-            Controls.Add(view_products_adminbtn);
+            ClientSize = new Size(1364, 573);
+            Controls.Add(logout_btn);
+            Controls.Add(edit_userbtn);
+            Controls.Add(button2);
+            Controls.Add(button1);
             Controls.Add(pictureBox1);
-            Controls.Add(view_vendor_adminbtn);
             Controls.Add(dataGridView1);
             Name = "Adminpage";
             StartPosition = FormStartPosition.CenterScreen;
@@ -127,10 +126,10 @@
         #endregion
 
         private DataGridView dataGridView1;
-        private Button view_vendor_adminbtn;
         private PictureBox pictureBox1;
-        private Button view_products_adminbtn;
-        private Button add_vendor_btn;
-        private Button add_products_btn;
+        private Button button1;
+        private Button button2;
+        private Button edit_userbtn;
+        private Button logout_btn;
     }
 }
