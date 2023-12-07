@@ -33,7 +33,7 @@ namespace Citisoft_Software
                 else if (password_edit_textbox.Text == conpassword_edit_textbox.Text)
                 {
                     con.Open();
-                    string update = "UPDATE user_details SET full_name= '"+fullname_edit_textbox.Text+"', email_address = '"+ email_edit_textbox.Text + "', password = '"+ password_edit_textbox.Text + "' WHERE email_address = '" + login_form.instance.tbemail.Text+ "' AND password = '" + login_form.instance.tbpassword.Text+ "'";
+                    string update = "UPDATE user_details SET full_name= '" + fullname_edit_textbox.Text + "', email_address = '" + email_edit_textbox.Text + "', password = '" + password_edit_textbox.Text + "' WHERE email_address = '" + login_form.instance.tbemail.Text + "' AND password = '" + login_form.instance.tbpassword.Text + "'";
                     SqlCommand cmd = new SqlCommand(update, con);
                     cmd.ExecuteNonQuery();
 
@@ -68,6 +68,21 @@ namespace Citisoft_Software
             this.Close();
             Mainmenu mainmenu = new Mainmenu();
             mainmenu.Show();
+        }
+
+        private void show_password_checkbox_CheckedChanged(object sender, EventArgs e)
+        {
+            if (show_password_checkbox.Checked)
+            {
+                password_edit_textbox.UseSystemPasswordChar = false;
+                conpassword_edit_textbox.UseSystemPasswordChar = false;
+
+            }
+            else
+            {
+                password_edit_textbox.UseSystemPasswordChar = true;
+                conpassword_edit_textbox.UseSystemPasswordChar = true;
+            }
         }
     }
 }

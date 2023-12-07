@@ -40,6 +40,7 @@
             conpassword_edit_textbox = new TextBox();
             btn_save = new Button();
             back_edit_btn = new Button();
+            show_password_checkbox = new CheckBox();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
             // 
@@ -156,11 +157,26 @@
             back_edit_btn.UseVisualStyleBackColor = true;
             back_edit_btn.Click += back_edit_btn_Click;
             // 
+            // show_password_checkbox
+            // 
+            show_password_checkbox.AutoSize = true;
+            show_password_checkbox.Cursor = Cursors.Hand;
+            show_password_checkbox.FlatStyle = FlatStyle.Flat;
+            show_password_checkbox.Font = new Font("Times New Roman", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            show_password_checkbox.Location = new Point(373, 327);
+            show_password_checkbox.Name = "show_password_checkbox";
+            show_password_checkbox.Size = new Size(121, 21);
+            show_password_checkbox.TabIndex = 20;
+            show_password_checkbox.Text = "Show Password";
+            show_password_checkbox.UseVisualStyleBackColor = true;
+            show_password_checkbox.CheckedChanged += show_password_checkbox_CheckedChanged;
+            // 
             // EditProfile
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(532, 439);
+            Controls.Add(show_password_checkbox);
             Controls.Add(back_edit_btn);
             Controls.Add(btn_save);
             Controls.Add(conpassword_edit_textbox);
@@ -195,5 +211,6 @@
         private TextBox conpassword_edit_textbox;
         private Button btn_save;
         private Button back_edit_btn;
+        private CheckBox show_password_checkbox;
     }
 }
