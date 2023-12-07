@@ -19,7 +19,7 @@ namespace Citisoft_Software
         {
             InitializeComponent();
         }
-        SqlConnection con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=""C:\Users\iamid\Documents\Idan documents\Software engineering\Visual studios code\Citisoft Software\userdata.mdf"";Integrated Security=True");
+        SqlConnection con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=""C:\Users\Jishnu Chand\OneDrive\Documents\Github\Citisoft-Software\userdata.mdf"";Integrated Security=True");
 
         private void back_to_login_Click(object sender, EventArgs e)
         {
@@ -47,7 +47,7 @@ namespace Citisoft_Software
         {
             try
             {
-                if (fullname_textbox.Text == "" && email_textbox.Text == "" && password_textbox.Text == "" && confirm_password_textbox.Text == "" )
+                if (fullname_textbox.Text == "" && email_textbox.Text == "" && password_textbox.Text == "" && confirm_password_textbox.Text == "")
                 {
                     MessageBox.Show("Boxes are Empty", "Registration Failed", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
@@ -85,7 +85,10 @@ namespace Citisoft_Software
             con.Close();
         }
 
-       
+        private void register_form_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
 

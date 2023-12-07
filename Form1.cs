@@ -9,23 +9,23 @@ namespace Citisoft_Software
         public static login_form instance;
         public TextBox tbemail;
         public TextBox tbpassword;
-       
+
         public login_form()
         {
             InitializeComponent();
             instance = this;
-            tbemail= email_logintextbox;
-            tbpassword= password_logintextbox;
-            
+            tbemail = email_logintextbox;
+            tbpassword = password_logintextbox;
+
 
         }
-        SqlConnection con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=""C:\Users\iamid\Documents\Idan documents\Software engineering\Visual studios code\Citisoft Software\userdata.mdf"";Integrated Security=True");
+        SqlConnection con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=""C:\Users\Jishnu Chand\OneDrive\Documents\Github\Citisoft-Software\userdata.mdf"";Integrated Security=True");
 
 
 
         private void btn_login_Click(object sender, EventArgs e)
         {
-            
+
             con.Open();
             try
             {
@@ -33,7 +33,7 @@ namespace Citisoft_Software
                 email = email_logintextbox.Text;
                 password = password_logintextbox.Text;
 
-                String query = "SELECT email_address,password FROM user_details WHERE email_address = '" +email+ "' AND password = '" +password+ "' ";
+                String query = "SELECT email_address,password FROM user_details WHERE email_address = '" + email + "' AND password = '" + password + "' ";
                 SqlDataAdapter adp = new SqlDataAdapter(query, con);
                 DataTable dt = new DataTable();
                 adp.Fill(dt);
@@ -63,7 +63,7 @@ namespace Citisoft_Software
                 MessageBox.Show("Login Error");
             }
             finally { con.Close(); }
-        }   
+        }
 
         private void create_account_Click(object sender, EventArgs e)
         {
@@ -85,6 +85,14 @@ namespace Citisoft_Software
             }
         }
 
-       
+        private void login_form_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void login_form_Load_1(object sender, EventArgs e)
+        {
+
+        }
     }
 }

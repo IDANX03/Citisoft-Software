@@ -214,6 +214,7 @@
             Name = "register_form";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Register";
+            Load += register_form_Load;
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ResumeLayout(false);
             PerformLayout();
