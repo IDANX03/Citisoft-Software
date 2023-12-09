@@ -16,8 +16,9 @@ namespace Citisoft_Software
         public Mainmenu()
         {
             InitializeComponent();
+
         }
-        
+
 
 
 
@@ -47,7 +48,76 @@ namespace Citisoft_Software
             this.Close();
             EditProfile editProfile = new EditProfile();
             editProfile.Show();
-           
+
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        void FillVendorGridView()
+        {
+            DataGridViewLinkColumn websiteLinkColumn = new DataGridViewLinkColumn();
+            websiteLinkColumn.HeaderText = "Website";
+            websiteLinkColumn.DataPropertyName = "WebsiteLink";
+            websiteLinkColumn.LinkBehavior = LinkBehavior.SystemDefault;
+
+            List<Vendors> vendorList = new List<Vendors>();
+            Vendors vendor = new Vendors();
+
+
+
+            vendorList = vendor.GetVendors();
+
+            dataGridView1.DataSource = vendorList;
+            dataGridView1.Columns.Add(websiteLinkColumn);
+        }
+
+        void FillProductGridView()
+        {
+            List<Product> ProductList = new List<Product>();
+            Product product = new Product();
+
+
+
+            ProductList = product.GetVendors();
+
+            dataGridView1.DataSource = ProductList;
+        }
+
+        void SearchProductGridView()
+        {
+            List<Product> ProductList = new List<Product>();
+            Product product = new Product();
+
+            ProductList = product.GetVendors();
+
+            string searchText = searchBox.Text;
+
+            List<Product> filteredList = ProductList
+                .Where(product => product.ProductName.Contains(searchText, StringComparison.OrdinalIgnoreCase))
+                .ToList();
+
+            
+
+            dataGridView1.DataSource = filteredList;
+        }
+
+        private void view_vendor_btn_Click(object sender, EventArgs e)
+        {
+
+            FillVendorGridView();
+        }
+
+        private void view_product_btn_Click(object sender, EventArgs e)
+        {
+            FillProductGridView();
+        }
+
+        private void searchbtn_Click(object sender, EventArgs e)
+        {
+            SearchProductGridView();
         }
     }
 }

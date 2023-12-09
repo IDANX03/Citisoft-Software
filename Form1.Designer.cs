@@ -169,6 +169,7 @@
             Name = "login_form";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Sign up";
+            Load += login_form_Load_1;
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ResumeLayout(false);
             PerformLayout();

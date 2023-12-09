@@ -30,7 +30,7 @@
         {
             components = new System.ComponentModel.Container();
             pictureBox1 = new PictureBox();
-            textBox1 = new TextBox();
+            searchBox = new TextBox();
             view_vendor_btn = new Button();
             view_product_btn = new Button();
             logout_btn = new Button();
@@ -53,12 +53,12 @@
             pictureBox1.TabIndex = 0;
             pictureBox1.TabStop = false;
             // 
-            // textBox1
+            // searchBox
             // 
-            textBox1.Location = new Point(233, 63);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(285, 27);
-            textBox1.TabIndex = 1;
+            searchBox.Location = new Point(233, 63);
+            searchBox.Name = "searchBox";
+            searchBox.Size = new Size(285, 27);
+            searchBox.TabIndex = 1;
             // 
             // view_vendor_btn
             // 
@@ -71,6 +71,7 @@
             view_vendor_btn.TabIndex = 2;
             view_vendor_btn.Text = "View Vendor";
             view_vendor_btn.UseVisualStyleBackColor = true;
+            view_vendor_btn.Click += view_vendor_btn_Click;
             // 
             // view_product_btn
             // 
@@ -83,6 +84,7 @@
             view_product_btn.TabIndex = 3;
             view_product_btn.Text = "View Product";
             view_product_btn.UseVisualStyleBackColor = true;
+            view_product_btn.Click += view_product_btn_Click;
             // 
             // logout_btn
             // 
@@ -120,6 +122,7 @@
             dataGridView1.RowHeadersWidth = 51;
             dataGridView1.Size = new Size(497, 280);
             dataGridView1.TabIndex = 6;
+            dataGridView1.CellContentClick += dataGridView1_CellContentClick;
             // 
             // searchbtn
             // 
@@ -131,6 +134,7 @@
             searchbtn.TabIndex = 7;
             searchbtn.Text = ">";
             searchbtn.UseVisualStyleBackColor = false;
+            searchbtn.Click += searchbtn_Click;
             // 
             // edit_profilebtn
             // 
@@ -157,7 +161,7 @@
             Controls.Add(logout_btn);
             Controls.Add(view_product_btn);
             Controls.Add(view_vendor_btn);
-            Controls.Add(textBox1);
+            Controls.Add(searchBox);
             Controls.Add(pictureBox1);
             Name = "Mainmenu";
             StartPosition = FormStartPosition.CenterScreen;
@@ -171,7 +175,7 @@
         #endregion
 
         private PictureBox pictureBox1;
-        private TextBox textBox1;
+        private TextBox searchBox;
         private Button view_vendor_btn;
         private Button view_product_btn;
         private Button logout_btn;

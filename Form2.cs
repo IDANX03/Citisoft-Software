@@ -90,6 +90,7 @@ namespace Citisoft_Software
             con.Close();
         }
 
+
         private void fullname_textbox_TextChanged(object sender, EventArgs e)
         {
             if (fullname_textbox.Text.Length > 50)
@@ -124,7 +125,9 @@ namespace Citisoft_Software
                 label9.Visible = true;
             }
             else { label9.Visible = false; }
-        }
+         }
+
+        
     }
 }
 
