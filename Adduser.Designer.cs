@@ -41,6 +41,11 @@
             label2 = new Label();
             login = new Label();
             back_btn = new Button();
+            label6 = new Label();
+            label4 = new Label();
+            label7 = new Label();
+            label8 = new Label();
+            label10 = new Label();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
             // 
@@ -63,6 +68,7 @@
             confirm_password_textbox.Size = new Size(243, 27);
             confirm_password_textbox.TabIndex = 35;
             confirm_password_textbox.UseSystemPasswordChar = true;
+            confirm_password_textbox.TextChanged += confirm_password_textbox_TextChanged;
             // 
             // label5
             // 
@@ -81,6 +87,7 @@
             email_textbox.Name = "email_textbox";
             email_textbox.Size = new Size(243, 27);
             email_textbox.TabIndex = 33;
+            email_textbox.TextChanged += email_textbox_TextChanged;
             // 
             // label1
             // 
@@ -128,6 +135,7 @@
             password_textbox.Size = new Size(243, 27);
             password_textbox.TabIndex = 29;
             password_textbox.UseSystemPasswordChar = true;
+            password_textbox.TextChanged += password_textbox_TextChanged;
             // 
             // fullname_textbox
             // 
@@ -136,6 +144,7 @@
             fullname_textbox.Name = "fullname_textbox";
             fullname_textbox.Size = new Size(243, 27);
             fullname_textbox.TabIndex = 28;
+            fullname_textbox.TextChanged += fullname_textbox_TextChanged;
             // 
             // label3
             // 
@@ -182,11 +191,81 @@
             back_btn.UseVisualStyleBackColor = false;
             back_btn.Click += back_btn_Click;
             // 
+            // label6
+            // 
+            label6.AutoSize = true;
+            label6.BackColor = SystemColors.ControlLightLight;
+            label6.Font = new Font("Times New Roman", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label6.ForeColor = Color.FromArgb(192, 0, 0);
+            label6.Location = new Point(211, 149);
+            label6.Name = "label6";
+            label6.Size = new Size(168, 17);
+            label6.TabIndex = 38;
+            label6.Text = "Max 50 characters allowed";
+            label6.Visible = false;
+            // 
+            // label4
+            // 
+            label4.AutoSize = true;
+            label4.BackColor = SystemColors.ControlLightLight;
+            label4.Font = new Font("Times New Roman", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label4.ForeColor = Color.FromArgb(192, 0, 0);
+            label4.Location = new Point(211, 199);
+            label4.Name = "label4";
+            label4.Size = new Size(168, 17);
+            label4.TabIndex = 39;
+            label4.Text = "Max 50 characters allowed";
+            label4.Visible = false;
+            // 
+            // label7
+            // 
+            label7.AutoSize = true;
+            label7.BackColor = SystemColors.ControlLightLight;
+            label7.Font = new Font("Times New Roman", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label7.ForeColor = Color.FromArgb(192, 0, 0);
+            label7.Location = new Point(211, 251);
+            label7.Name = "label7";
+            label7.Size = new Size(168, 17);
+            label7.TabIndex = 40;
+            label7.Text = "Max 50 characters allowed";
+            label7.Visible = false;
+            // 
+            // label8
+            // 
+            label8.AutoSize = true;
+            label8.BackColor = SystemColors.ControlLightLight;
+            label8.Font = new Font("Times New Roman", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label8.ForeColor = Color.FromArgb(192, 0, 0);
+            label8.Location = new Point(211, 298);
+            label8.Name = "label8";
+            label8.Size = new Size(168, 17);
+            label8.TabIndex = 41;
+            label8.Text = "Max 50 characters allowed";
+            label8.Visible = false;
+            // 
+            // label10
+            // 
+            label10.AutoSize = true;
+            label10.BackColor = SystemColors.ControlLightLight;
+            label10.Font = new Font("Times New Roman", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label10.ForeColor = Color.FromArgb(192, 0, 0);
+            label10.Location = new Point(211, 298);
+            label10.Name = "label10";
+            label10.Size = new Size(141, 17);
+            label10.TabIndex = 42;
+            label10.Text = "Passwords dont match";
+            label10.Visible = false;
+            // 
             // Adduser
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(533, 450);
+            Controls.Add(label10);
+            Controls.Add(label8);
+            Controls.Add(label7);
+            Controls.Add(label4);
+            Controls.Add(label6);
             Controls.Add(back_btn);
             Controls.Add(pictureBox1);
             Controls.Add(confirm_password_textbox);
@@ -223,5 +302,10 @@
         private Label label2;
         private Label login;
         private Button back_btn;
+        private Label label6;
+        private Label label4;
+        private Label label7;
+        private Label label8;
+        private Label label10;
     }
 }
