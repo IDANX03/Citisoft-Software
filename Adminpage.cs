@@ -48,6 +48,8 @@ namespace Citisoft_Software
             adp.Fill(dt);
 
             dataGridView1.DataSource = dt;
+            add_user_btn.Visible = true;
+            delete_user_btn.Visible = true;
 
         }
 

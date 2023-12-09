@@ -46,7 +46,7 @@
             dataGridView1.Location = new Point(172, 154);
             dataGridView1.Name = "dataGridView1";
             dataGridView1.RowHeadersWidth = 51;
-            dataGridView1.Size = new Size(606, 390);
+            dataGridView1.Size = new Size(534, 390);
             dataGridView1.TabIndex = 0;
             // 
             // pictureBox1
@@ -116,6 +116,7 @@
             add_user_btn.TabIndex = 7;
             add_user_btn.Text = "Add User";
             add_user_btn.UseVisualStyleBackColor = true;
+            add_user_btn.Visible = false;
             add_user_btn.Click += add_user_btn_Click;
             // 
             // delete_user_btn
@@ -128,6 +129,7 @@
             delete_user_btn.TabIndex = 8;
             delete_user_btn.Text = "Delete User";
             delete_user_btn.UseVisualStyleBackColor = true;
+            delete_user_btn.Visible = false;
             delete_user_btn.Click += delete_user_btn_Click;
             // 
             // Adminpage

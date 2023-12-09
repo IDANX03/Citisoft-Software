@@ -52,8 +52,8 @@ namespace Citisoft_Software
                     password_edit_textbox.Clear();
                     conpassword_edit_textbox.Clear();
                     password_edit_textbox.Focus();
-
                 }
+
             }
             catch (Exception exc)
             {
@@ -62,7 +62,6 @@ namespace Citisoft_Software
             }
             con.Close();
         }
-
         private void back_edit_btn_Click(object sender, EventArgs e)
         {
             this.Close();
@@ -83,6 +82,42 @@ namespace Citisoft_Software
                 password_edit_textbox.UseSystemPasswordChar = true;
                 conpassword_edit_textbox.UseSystemPasswordChar = true;
             }
+        }
+
+        private void fullname_edit_textbox_TextChanged(object sender, EventArgs e)
+        {
+            if (fullname_edit_textbox.Text.Length > 50)
+            {
+                label6.Visible = true;
+            }
+            else { label6.Visible = false; }
+        }
+
+        private void email_edit_textbox_TextChanged(object sender, EventArgs e)
+        {
+            if (email_edit_textbox.Text.Length > 50)
+            {
+                label7.Visible = true;
+            }
+            else { label7.Visible = false; }
+        }
+
+        private void password_edit_textbox_TextChanged(object sender, EventArgs e)
+        {
+            if (password_edit_textbox.Text.Length > 50)
+            {
+                label8.Visible = true;
+            }
+            else { label8.Visible = false; }
+        }
+
+        private void conpassword_edit_textbox_TextChanged(object sender, EventArgs e)
+        {
+            if (conpassword_edit_textbox.Text.Length > 50)
+            {
+                label9.Visible = true;
+            }
+            else { label9.Visible = false; }
         }
     }
 }

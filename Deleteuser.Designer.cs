@@ -85,6 +85,7 @@
             Controls.Add(label1);
             Controls.Add(pictureBox1);
             Name = "Deleteuser";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "Deleteuser";
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ResumeLayout(false);

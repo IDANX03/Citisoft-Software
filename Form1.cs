@@ -24,7 +24,7 @@ namespace Citisoft_Software
 
 
         private void btn_login_Click(object sender, EventArgs e)
-        {
+                    {
             
             con.Open();
             try
