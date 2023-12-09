@@ -1,32 +1,22 @@
 ﻿using System;
-using System.Collections;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
-using System.Linq.Expressions;
+using System.Reflection.Emit;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Citisoft_Software
 {
-    public partial class register_form : Form
+    public partial class Adduser : Form
     {
-        public register_form()
+        public Adduser()
         {
             InitializeComponent();
-        }
-        SqlConnection con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=""C:\Users\iamid\Documents\Idan documents\Software engineering\Visual studios code\Citisoft Software\userdata.mdf"";Integrated Security=True");
-
-        private void back_to_login_Click(object sender, EventArgs e)
-        {
-            this.Close();
-            login_form log = new login_form();
-            log.Show();
-
         }
 
         private void show_password_checkbox_CheckedChanged(object sender, EventArgs e)
@@ -35,6 +25,7 @@ namespace Citisoft_Software
             {
                 password_textbox.UseSystemPasswordChar = false;
                 confirm_password_textbox.UseSystemPasswordChar = false;
+
             }
             else
             {
@@ -45,15 +36,21 @@ namespace Citisoft_Software
 
         private void btn_register_Click(object sender, EventArgs e)
         {
+            SqlConnection con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=""C:\Users\iamid\Documents\Idan documents\Software engineering\Visual studios code\Citisoft Software\userdata.mdf"";Integrated Security=True");
+
             try
             {
                 if (fullname_textbox.Text == "" && email_textbox.Text == "" && password_textbox.Text == "" && confirm_password_textbox.Text == "")
                 {
-                    MessageBox.Show("Required boxes is Empty", "Registration Failed", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+                    MessageBox.Show("Boxes are Empty", "Registration Failed", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
+
                 else if (password_textbox.Text == confirm_password_textbox.Text)
                 {
+
                     con.Open();
+
                     string reg = "INSERT INTO user_details(full_name,email_address,password) VALUES('" + fullname_textbox.Text + "', '" + email_textbox.Text + "', '" + password_textbox.Text + "')";
 
                     SqlCommand cmd = new SqlCommand(reg, con);
@@ -71,17 +68,15 @@ namespace Citisoft_Software
                 }
                 else
                 {
+
                     label10.Visible = true;
                     password_textbox.Clear();
-                    confirm_password_textbox.Clear() ;
+                    confirm_password_textbox.Clear();
                     password_textbox.Focus();
+
+
                 }
-
-
-
-
             }
-
             catch (Exception exc)
             {
                 MessageBox.Show(exc.Message);
@@ -90,6 +85,12 @@ namespace Citisoft_Software
             con.Close();
         }
 
+        private void back_btn_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            Adminpage adminpage = new Adminpage();
+            adminpage.Show();
+        }
 
         private void fullname_textbox_TextChanged(object sender, EventArgs e)
         {
@@ -104,37 +105,27 @@ namespace Citisoft_Software
         {
             if (email_textbox.Text.Length > 50)
             {
-                label7.Visible = true;
+                label4.Visible = true;
             }
-            else { label7.Visible = false; }
+            else { label4.Visible = false; }
         }
 
         private void password_textbox_TextChanged(object sender, EventArgs e)
         {
             if (password_textbox.Text.Length > 50)
             {
-                label8.Visible = true;
+                label7.Visible = true;
             }
-            else { label8.Visible = false; }
+            else { label7.Visible = false; }
         }
 
         private void confirm_password_textbox_TextChanged(object sender, EventArgs e)
         {
             if (confirm_password_textbox.Text.Length > 50)
             {
-                label9.Visible = true;
+                label8.Visible = true;
             }
-            else { label9.Visible = false; }
-         }
-
-        
+            else { label8.Visible = false; }
+        }
     }
 }
-
-            
-            
-                
-            
-            
-            
-           

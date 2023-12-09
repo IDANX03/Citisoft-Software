@@ -33,7 +33,7 @@ namespace Citisoft_Software
                 else if (password_edit_textbox.Text == conpassword_edit_textbox.Text)
                 {
                     con.Open();
-                    string update = "UPDATE user_details SET full_name= '"+fullname_edit_textbox.Text+"', email_address = '"+ email_edit_textbox.Text + "', password = '"+ password_edit_textbox.Text + "' WHERE email_address = '" + login_form.instance.tbemail.Text+ "' AND password = '" + login_form.instance.tbpassword.Text+ "'";
+                    string update = "UPDATE user_details SET full_name= '" + fullname_edit_textbox.Text + "', email_address = '" + email_edit_textbox.Text + "', password = '" + password_edit_textbox.Text + "' WHERE email_address = '" + login_form.instance.tbemail.Text + "' AND password = '" + login_form.instance.tbpassword.Text + "'";
                     SqlCommand cmd = new SqlCommand(update, con);
                     cmd.ExecuteNonQuery();
 
@@ -52,8 +52,8 @@ namespace Citisoft_Software
                     password_edit_textbox.Clear();
                     conpassword_edit_textbox.Clear();
                     password_edit_textbox.Focus();
-
                 }
+
             }
             catch (Exception exc)
             {
@@ -62,12 +62,62 @@ namespace Citisoft_Software
             }
             con.Close();
         }
-
         private void back_edit_btn_Click(object sender, EventArgs e)
         {
             this.Close();
             Mainmenu mainmenu = new Mainmenu();
             mainmenu.Show();
+        }
+
+        private void show_password_checkbox_CheckedChanged(object sender, EventArgs e)
+        {
+            if (show_password_checkbox.Checked)
+            {
+                password_edit_textbox.UseSystemPasswordChar = false;
+                conpassword_edit_textbox.UseSystemPasswordChar = false;
+
+            }
+            else
+            {
+                password_edit_textbox.UseSystemPasswordChar = true;
+                conpassword_edit_textbox.UseSystemPasswordChar = true;
+            }
+        }
+
+        private void fullname_edit_textbox_TextChanged(object sender, EventArgs e)
+        {
+            if (fullname_edit_textbox.Text.Length > 50)
+            {
+                label6.Visible = true;
+            }
+            else { label6.Visible = false; }
+        }
+
+        private void email_edit_textbox_TextChanged(object sender, EventArgs e)
+        {
+            if (email_edit_textbox.Text.Length > 50)
+            {
+                label7.Visible = true;
+            }
+            else { label7.Visible = false; }
+        }
+
+        private void password_edit_textbox_TextChanged(object sender, EventArgs e)
+        {
+            if (password_edit_textbox.Text.Length > 50)
+            {
+                label8.Visible = true;
+            }
+            else { label8.Visible = false; }
+        }
+
+        private void conpassword_edit_textbox_TextChanged(object sender, EventArgs e)
+        {
+            if (conpassword_edit_textbox.Text.Length > 50)
+            {
+                label9.Visible = true;
+            }
+            else { label9.Visible = false; }
         }
     }
 }
