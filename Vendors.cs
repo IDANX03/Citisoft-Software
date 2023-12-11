@@ -9,17 +9,22 @@ namespace Citisoft_Software
 {
     public class Vendors
     {
-        public int Id { get; set; }
-        public string? CompanyName { get; set; }
-        public string? WebsiteLink { get; set; }
-        public string? SoftwareName { get; set; }
+        public int vendor_id { get; set; }
+        public string? vendor_name { get; set; }
+        public string? website_link { get; set; }
+        public string? product_name { get; set; }
+        public string? no_of_employees { get; set; }
+        public string? vendor_established { get; set; }
+        public string? address { get; set; }
 
 
 
         public List<Vendors> GetVendors()
         {
             List<Vendors> vendors = new List<Vendors>();
-            SqlConnection conn = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=""C:\Users\Jishnu Chand\OneDrive\Documents\Github\Citisoft-Software\userdata.mdf"";Integrated Security=True");
+            string relativePath = Directory.GetParent(Directory.GetCurrentDirectory()).Parent.Parent.FullName;
+            string dbPath = Path.Combine(relativePath, "userdata.mdf");
+            SqlConnection conn = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename="+ dbPath +"; Integrated Security=True");
 
             string query = "SELECT * FROM Vendor";
 
@@ -33,11 +38,14 @@ namespace Citisoft_Software
             {
 
                 Vendors vendor = new Vendors();
-                vendor.Id = Convert.ToInt32(reader["id"]);
-                vendor.CompanyName = reader["company_name"].ToString();
-                vendor.WebsiteLink = reader["website_link"].ToString();
-                vendor.SoftwareName = reader["software_name"].ToString();
-                
+                vendor.vendor_id = Convert.ToInt32(reader["vendor_id"]);
+                vendor.vendor_name = reader["vendor_name"].ToString();
+                vendor.website_link = reader["website_link"].ToString();
+                vendor.product_name = reader["product_name"].ToString();
+                vendor.no_of_employees = reader["no.of_employees"].ToString();
+                vendor.vendor_established = reader["vendor_established"].ToString();
+                vendor.address = reader["address"].ToString();
+
                 vendors.Add(vendor);
             }
             return vendors;

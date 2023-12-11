@@ -4,21 +4,27 @@ using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Diagnostics;
+using Microsoft.VisualBasic.Logging;
+
 
 namespace Citisoft_Software
 {
     public class Product
     {
-        public int Id { get; set; }
-        public string? ProductName { get; set; }
-        public string? Modules { get; set; }
-        public string? CloudEnabled { get; set; }
-        public string? DocumentAttached { get; set;}
+        public int product_id { get; set; }
+        public int vendor_id { get; set; }
+        public string ProductName { get; set; }
+        public string? software_type{ get; set; }
+        public string? description { get; set;}
 
         public List<Product> GetVendors()
         {
             List<Product> products = new List<Product>();
-            SqlConnection conn = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=""C:\Users\Jishnu Chand\OneDrive\Documents\Github\Citisoft-Software\userdata.mdf"";Integrated Security=True");
+
+            string relativePath = Directory.GetParent(Directory.GetCurrentDirectory()).Parent.Parent.FullName;
+            string dbPath = Path.Combine(relativePath, "userdata.mdf");
+            SqlConnection conn = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename="+ dbPath + ";Integrated Security=True");
 
             string query = "SELECT * FROM Product";
 
@@ -32,11 +38,11 @@ namespace Citisoft_Software
             {
 
                 Product product = new Product();
-                product.Id = Convert.ToInt32(reader["id"]);
+                product.product_id = Convert.ToInt32(reader["product_id"]);
+                product.vendor_id = Convert.ToInt32(reader["vendor_id"]);
                 product.ProductName = reader["product_name"].ToString();
-                product.Modules = reader["modules"].ToString();
-                product.CloudEnabled = reader["cloud_enabled"].ToString();
-                product.DocumentAttached = reader["document_attached"].ToString();
+                product.software_type = reader["software_type"].ToString();
+                product.description = reader["Description"].ToString();
 
                 products.Add(product);
             }
@@ -44,4 +50,5 @@ namespace Citisoft_Software
         }
 
     }
+    
 }

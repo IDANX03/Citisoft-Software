@@ -1,13 +1,17 @@
-﻿using System;
+﻿using Microsoft.VisualBasic.Logging;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Data.SqlClient;
+using System.Diagnostics;
 using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Diagnostics;
+
 
 namespace Citisoft_Software
 {
@@ -15,6 +19,7 @@ namespace Citisoft_Software
     {
         public Mainmenu()
         {
+        
             InitializeComponent();
 
         }
@@ -53,14 +58,19 @@ namespace Citisoft_Software
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
+          
 
+        }
+        private void LinkClickEventHandler(object sender, EventArgs e)
+        {
+           
         }
 
         void FillVendorGridView()
         {
             DataGridViewLinkColumn websiteLinkColumn = new DataGridViewLinkColumn();
             websiteLinkColumn.HeaderText = "Website";
-            websiteLinkColumn.DataPropertyName = "WebsiteLink";
+            websiteLinkColumn.DataPropertyName = "website_link";
             websiteLinkColumn.LinkBehavior = LinkBehavior.SystemDefault;
 
             List<Vendors> vendorList = new List<Vendors>();
@@ -119,5 +129,6 @@ namespace Citisoft_Software
         {
             SearchProductGridView();
         }
+        
     }
 }
