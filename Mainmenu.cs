@@ -56,16 +56,6 @@ namespace Citisoft_Software
 
         }
 
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-
-        }
-        private void LinkClickEventHandler(object sender, EventArgs e)
-        {
-
-        }
-
         void FillVendorGridView()
         {
             DataGridViewLinkColumn websiteLinkColumn = new DataGridViewLinkColumn();

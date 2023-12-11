@@ -20,8 +20,6 @@ namespace Citisoft_Software
 
         private void delete_btn_Click(object sender, EventArgs e)
         {
-            SqlConnection con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=""C:\Users\iamid\Documents\Idan documents\Software engineering\Visual studios code\Citisoft Software\userdata.mdf"";Integrated Security=True");
-
             try
             {
                 if (delete_id_txt.Text == "")

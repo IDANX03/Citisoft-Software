@@ -123,7 +123,6 @@
             dataGridView1.RowHeadersWidth = 51;
             dataGridView1.Size = new Size(497, 280);
             dataGridView1.TabIndex = 6;
-            dataGridView1.CellContentClick += dataGridView1_CellContentClick;
             // 
             // searchbtn
             // 
