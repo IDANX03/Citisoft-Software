@@ -19,7 +19,7 @@ namespace Citisoft_Software
     {
         public Mainmenu()
         {
-        
+
             InitializeComponent();
 
         }
@@ -54,16 +54,6 @@ namespace Citisoft_Software
             EditProfile editProfile = new EditProfile();
             editProfile.Show();
 
-        }
-
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-          
-
-        }
-        private void LinkClickEventHandler(object sender, EventArgs e)
-        {
-           
         }
 
         void FillVendorGridView()
@@ -109,7 +99,7 @@ namespace Citisoft_Software
                 .Where(product => product.ProductName.Contains(searchText, StringComparison.OrdinalIgnoreCase))
                 .ToList();
 
-            
+
 
             dataGridView1.DataSource = filteredList;
         }
@@ -129,6 +119,10 @@ namespace Citisoft_Software
         {
             SearchProductGridView();
         }
-        
+
+        private void searchBox_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

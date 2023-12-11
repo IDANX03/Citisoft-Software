@@ -41,7 +41,6 @@ namespace Citisoft_Software
 
         private void edit_userbtn_Click(object sender, EventArgs e)
         {
-            SqlConnection con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=""C:\Users\iamid\Documents\Idan documents\Software engineering\Visual studios code\Citisoft Software\userdata.mdf"";Integrated Security=True");
             String query = "SELECT * FROM user_details";
             SqlDataAdapter adp = new SqlDataAdapter(query, con);
             DataTable dt = new DataTable();
