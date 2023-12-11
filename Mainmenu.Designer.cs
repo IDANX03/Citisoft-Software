@@ -59,6 +59,7 @@
             searchBox.Name = "searchBox";
             searchBox.Size = new Size(285, 27);
             searchBox.TabIndex = 1;
+            searchBox.TextChanged += searchBox_TextChanged;
             // 
             // view_vendor_btn
             // 

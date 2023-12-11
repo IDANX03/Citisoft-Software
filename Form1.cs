@@ -19,7 +19,7 @@ namespace Citisoft_Software
 
 
         }
-        SqlConnection con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=""C:\Users\Jishnu Chand\OneDrive\Documents\Github\Citisoft-Software\userdata.mdf"";Integrated Security=True");
+        SqlConnection con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=""C:\Users\iamid\Documents\Idan documents\Software engineering\Visual studios code\Citisoft Software\userdata.mdf"";Integrated Security=True");
 
 
 
@@ -29,10 +29,11 @@ namespace Citisoft_Software
             con.Open();
             try
             {
+                // Assigning email_logintextbox.Text and password_logintextbox.Text to  variables email and password
                 String email, password;
                 email = email_logintextbox.Text;
                 password = password_logintextbox.Text;
-
+                //query for searching through the table if the given email and password exist.
                 String query = "SELECT email_address,password FROM user_details WHERE email_address = '" + email + "' AND password = '" + password + "' ";
                 SqlDataAdapter adp = new SqlDataAdapter(query, con);
                 DataTable dt = new DataTable();
@@ -44,14 +45,24 @@ namespace Citisoft_Software
                     mainmenu.Show();
                     this.Hide();
                 }
+                //Creating a admin email and password
                 else if (email_logintextbox.Text == "admin@gmail.com" && password_logintextbox.Text == "Admin2023")
                 {
                     this.Hide();
                     Adminpage adminpage = new Adminpage();
                     adminpage.Show();
                 }
+                //display error if details are empty
+                else if (email_logintextbox.Text == "" || password_logintextbox.Text == "")
+                {
+
+                    label5.Visible = true;
+                    label7.Visible = true;
+
+                }
                 else
                 {
+                    //If the details do not match
                     MessageBox.Show("Login details do not match", "Login Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     email_logintextbox.Clear();
                     password_logintextbox.Clear();
@@ -85,14 +96,9 @@ namespace Citisoft_Software
             }
         }
 
-        private void login_form_Load(object sender, EventArgs e)
-        {
 
-        }
 
-        private void login_form_Load_1(object sender, EventArgs e)
-        {
 
-        }
     }
+
 }

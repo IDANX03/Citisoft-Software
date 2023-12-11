@@ -38,6 +38,8 @@
             label4 = new Label();
             create_account = new Label();
             pictureBox1 = new PictureBox();
+            label5 = new Label();
+            label7 = new Label();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
             // 
@@ -150,12 +152,38 @@
             pictureBox1.TabIndex = 11;
             pictureBox1.TabStop = false;
             // 
+            // label5
+            // 
+            label5.AutoSize = true;
+            label5.Font = new Font("Times New Roman", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label5.ForeColor = Color.FromArgb(192, 0, 0);
+            label5.Location = new Point(172, 176);
+            label5.Name = "label5";
+            label5.Size = new Size(116, 19);
+            label5.TabIndex = 13;
+            label5.Text = "*Required field";
+            label5.Visible = false;
+            // 
+            // label7
+            // 
+            label7.AutoSize = true;
+            label7.Font = new Font("Times New Roman", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label7.ForeColor = Color.FromArgb(192, 0, 0);
+            label7.Location = new Point(172, 246);
+            label7.Name = "label7";
+            label7.Size = new Size(116, 19);
+            label7.TabIndex = 14;
+            label7.Text = "*Required field";
+            label7.Visible = false;
+            // 
             // login_form
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.ControlLightLight;
             ClientSize = new Size(494, 486);
+            Controls.Add(label7);
+            Controls.Add(label5);
             Controls.Add(pictureBox1);
             Controls.Add(create_account);
             Controls.Add(label4);
@@ -169,7 +197,6 @@
             Name = "login_form";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Sign up";
-            Load += login_form_Load_1;
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ResumeLayout(false);
             PerformLayout();
@@ -190,5 +217,7 @@
         private Label label6;
         private TextBox full_name_textbox;
         private PictureBox pictureBox1;
+        private Label label5;
+        private Label label7;
     }
 }

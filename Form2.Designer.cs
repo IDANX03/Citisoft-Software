@@ -42,6 +42,11 @@
             confirm_password_textbox = new TextBox();
             label5 = new Label();
             pictureBox1 = new PictureBox();
+            label7 = new Label();
+            label6 = new Label();
+            label8 = new Label();
+            label9 = new Label();
+            label10 = new Label();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
             // 
@@ -191,12 +196,82 @@
             pictureBox1.TabIndex = 24;
             pictureBox1.TabStop = false;
             // 
+            // label7
+            // 
+            label7.AutoSize = true;
+            label7.BackColor = SystemColors.ControlLightLight;
+            label7.Font = new Font("Times New Roman", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label7.ForeColor = Color.FromArgb(192, 0, 0);
+            label7.Location = new Point(210, 202);
+            label7.Name = "label7";
+            label7.Size = new Size(168, 17);
+            label7.TabIndex = 27;
+            label7.Text = "Max 50 characters allowed";
+            label7.Visible = false;
+            // 
+            // label6
+            // 
+            label6.AutoSize = true;
+            label6.BackColor = SystemColors.ControlLightLight;
+            label6.Font = new Font("Times New Roman", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label6.ForeColor = Color.FromArgb(192, 0, 0);
+            label6.Location = new Point(210, 152);
+            label6.Name = "label6";
+            label6.Size = new Size(168, 17);
+            label6.TabIndex = 28;
+            label6.Text = "Max 50 characters allowed";
+            label6.Visible = false;
+            // 
+            // label8
+            // 
+            label8.AutoSize = true;
+            label8.BackColor = SystemColors.ControlLightLight;
+            label8.Font = new Font("Times New Roman", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label8.ForeColor = Color.FromArgb(192, 0, 0);
+            label8.Location = new Point(210, 251);
+            label8.Name = "label8";
+            label8.Size = new Size(168, 17);
+            label8.TabIndex = 29;
+            label8.Text = "Max 50 characters allowed";
+            label8.Visible = false;
+            // 
+            // label9
+            // 
+            label9.AutoSize = true;
+            label9.BackColor = SystemColors.ControlLightLight;
+            label9.Font = new Font("Times New Roman", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label9.ForeColor = Color.FromArgb(192, 0, 0);
+            label9.Location = new Point(210, 301);
+            label9.Name = "label9";
+            label9.Size = new Size(168, 17);
+            label9.TabIndex = 30;
+            label9.Text = "Max 50 characters allowed";
+            label9.Visible = false;
+            // 
+            // label10
+            // 
+            label10.AutoSize = true;
+            label10.BackColor = SystemColors.ControlLightLight;
+            label10.Font = new Font("Times New Roman", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label10.ForeColor = Color.FromArgb(192, 0, 0);
+            label10.Location = new Point(210, 301);
+            label10.Name = "label10";
+            label10.Size = new Size(141, 17);
+            label10.TabIndex = 31;
+            label10.Text = "Passwords dont match";
+            label10.Visible = false;
+            // 
             // register_form
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.ControlLightLight;
             ClientSize = new Size(527, 513);
+            Controls.Add(label10);
+            Controls.Add(label9);
+            Controls.Add(label8);
+            Controls.Add(label6);
+            Controls.Add(label7);
             Controls.Add(pictureBox1);
             Controls.Add(confirm_password_textbox);
             Controls.Add(label5);
@@ -214,7 +289,7 @@
             Name = "register_form";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Register";
-            Load += register_form_Load;
+           
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ResumeLayout(false);
             PerformLayout();
@@ -236,5 +311,10 @@
         private TextBox confirm_password_textbox;
         private Label label5;
         private PictureBox pictureBox1;
+        private Label label7;
+        private Label label6;
+        private Label label8;
+        private Label label9;
+        private Label label10;
     }
 }
