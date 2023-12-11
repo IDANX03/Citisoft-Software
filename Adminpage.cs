@@ -48,25 +48,6 @@ namespace Citisoft_Software
             adp.Fill(dt);
 
             dataGridView1.DataSource = dt;
-            add_user_btn.Visible = true;
-            delete_user_btn.Visible = true;
-
-        }
-
-       
-
-        private void add_user_btn_Click(object sender, EventArgs e)
-        {
-            this.Hide();
-            Adduser adduser = new Adduser();
-            adduser.Show();
-        }
-
-        private void delete_user_btn_Click(object sender, EventArgs e)
-        {
-            this.Hide();
-            Deleteuser deluser = new Deleteuser();
-            deluser.Show();
         }
     }
 }

@@ -153,7 +153,7 @@
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(778, 450);
+            ClientSize = new Size(782, 450);
             Controls.Add(edit_profilebtn);
             Controls.Add(searchbtn);
             Controls.Add(dataGridView1);
