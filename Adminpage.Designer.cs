@@ -34,8 +34,6 @@
             button2 = new Button();
             edit_userbtn = new Button();
             logout_btn = new Button();
-            add_user_btn = new Button();
-            delete_user_btn = new Button();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
@@ -43,10 +41,10 @@
             // dataGridView1
             // 
             dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Location = new Point(172, 154);
+            dataGridView1.Location = new Point(175, 112);
             dataGridView1.Name = "dataGridView1";
             dataGridView1.RowHeadersWidth = 51;
-            dataGridView1.Size = new Size(534, 390);
+            dataGridView1.Size = new Size(1177, 449);
             dataGridView1.TabIndex = 0;
             // 
             // pictureBox1
@@ -106,39 +104,11 @@
             logout_btn.UseVisualStyleBackColor = true;
             logout_btn.Click += logout_btn_Click;
             // 
-            // add_user_btn
-            // 
-            add_user_btn.Cursor = Cursors.Hand;
-            add_user_btn.Font = new Font("Times New Roman", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            add_user_btn.Location = new Point(172, 98);
-            add_user_btn.Name = "add_user_btn";
-            add_user_btn.Size = new Size(94, 29);
-            add_user_btn.TabIndex = 7;
-            add_user_btn.Text = "Add User";
-            add_user_btn.UseVisualStyleBackColor = true;
-            add_user_btn.Visible = false;
-            add_user_btn.Click += add_user_btn_Click;
-            // 
-            // delete_user_btn
-            // 
-            delete_user_btn.Cursor = Cursors.Hand;
-            delete_user_btn.Font = new Font("Times New Roman", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            delete_user_btn.Location = new Point(301, 98);
-            delete_user_btn.Name = "delete_user_btn";
-            delete_user_btn.Size = new Size(106, 29);
-            delete_user_btn.TabIndex = 8;
-            delete_user_btn.Text = "Delete User";
-            delete_user_btn.UseVisualStyleBackColor = true;
-            delete_user_btn.Visible = false;
-            delete_user_btn.Click += delete_user_btn_Click;
-            // 
             // Adminpage
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(821, 573);
-            Controls.Add(delete_user_btn);
-            Controls.Add(add_user_btn);
+            ClientSize = new Size(1364, 573);
             Controls.Add(logout_btn);
             Controls.Add(edit_userbtn);
             Controls.Add(button2);
@@ -161,7 +131,5 @@
         private Button button2;
         private Button edit_userbtn;
         private Button logout_btn;
-        private Button add_user_btn;
-        private Button delete_user_btn;
     }
 }
